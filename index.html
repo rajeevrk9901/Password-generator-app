@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend mentor | Password generator app</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Global Container -->
+    <div class="flex items-center justify-center min-h-screen bg-[#131013] tracking-wide">
+        <!-- Local Container -->
+        <div class="px-5 py-10 " role="main-box">
+
+            <div class="md:w-96 w-72" role="content">
+                <div class="text-center text-white py-5" role="title">Password Generator</div>
+                <!-- inner container-1 -->
+                <div class="flex justify-between px-5 bg-[#241d1c] mb-3" role="pass-box">
+                    <div class="text-white text-2xl font-semibold py-2" id="pass">PTx1</div>
+                    <div class="flex items-center cursor-pointer" role="note">📑</div>
+                </div>
+
+                <!-- inner container-2 -->
+                <div class="bg-[#241d1c] text-white" role="slider-box">
+
+                    <div role="label" class="flex justify-between py-3 px-5">
+
+                        <div class="">Character Length</div>
+                        <!-- NOTE : Range Slider -->
+                        <p id="rangeValue">8</p>
+                    </div>
+
+                    <!-- NOTE : Range Slider -->
+                    <div class="range px-5  cursor-pointer">
+                        <input class="cursor-pointer w-full" type="range" value="8" min="0" max="20"
+                            oninput="rangeValue.innerText = this.value">
+                    </div>
+
+
+                    <div class="grid grid-cols-7 text-left w-65 px-5 py-3" id="chk-box">
+                        <input class="h-4 w-4 relative translate-y-1/2 " type="checkbox" name="" id="uppercase">
+                        <label class="col-span-6 " for="uppercase">Include Uppercase
+                            Letters</label>
+                        <input class="h-4 w-4 relative translate-y-1/2 " type="checkbox" name="" id="lowercase">
+                        <label class="col-span-6" for="lowercase">Include Lowercase Letters</label>
+                        <input class="h-4 w-4 relative translate-y-1/2" type="checkbox" name="" id="numbers">
+                        <label class="col-span-6" for="numbers">Include Numbers</label>
+                        <input class="h-4 w-4 relative translate-y-1/2" type="checkbox" name="" id="symbols">
+                        <label class="col-span-6" for="symbols">Include Symbols</label>
+                    </div>
+
+                    <!-- inner Container-3 -->
+                    <div class="flex flex-col gap-3 ">
+                        <div role="text">
+                            <div class="flex px-5 justify-between bg-[#181416] mx-5 py-3">
+                                <div class="text-xs mt-1 font-bold" role="text">STRENGTH</div>
+                                <div class="flex gap-2">
+                                    <div role="text">MEDIUM</div>
+                                    <div class="boxex-ylw flex space-x-1 items-center justify-center">
+                                        <div class="h-5 w-1.5 bg-yellow-300"></div>
+                                        <div class="h-5 w-1.5 bg-yellow-300"></div>
+                                        <div class="h-5 w-1.5 bg-yellow-300"></div>
+                                        <div class="h-5 w-1.5 border border-yellow-400"></div>
+                                        <!-- <div class="h-3 w-1 bg-none"></div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div role="button"
+                            class="flex justify-center text-black bg-[#b0e11f]  hover:bg-[#241d1c] mx-5 py-3 mb-5 border border-[#839452]  hover:text-[#839452] text-xs font-bold">
+                            GENERATE
+                            <!-- <button class="text-xs font-bold ">GENERATE</button> -->
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+<!-- 
+    Include Lowercase Letters
+Include Numbers
+Character Length
+10
+Include Symbols
+STRENGTH
+MEDIUM ||||
+Include Uppercase Letters
+Include Lowercase Letters
+GENERATE →
+ -->
